@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DF09FC51E3F50F10054A18E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FC41E3F50F10054A18E /* AppDelegate.swift */; };
+		1DF09FC71E3F50F10054A18E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FC61E3F50F10054A18E /* ViewController.swift */; };
+		1DF09FCA1E3F50F10054A18E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF09FC81E3F50F10054A18E /* Main.storyboard */; };
+		1DF09FCD1E3F50F10054A18E /* Accubow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FCB1E3F50F10054A18E /* Accubow.xcdatamodeld */; };
+		1DF09FCF1E3F50F10054A18E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF09FCE1E3F50F10054A18E /* Assets.xcassets */; };
+		1DF09FD21E3F50F10054A18E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF09FD01E3F50F10054A18E /* LaunchScreen.storyboard */; };
+		1DF09FDD1E3F50F10054A18E /* AccubowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FDC1E3F50F10054A18E /* AccubowTests.swift */; };
+		1DF09FE81E3F50F10054A18E /* AccubowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FE71E3F50F10054A18E /* AccubowUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1DF09FD91E3F50F10054A18E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF09FB91E3F50F10054A18E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF09FC01E3F50F10054A18E;
+			remoteInfo = Accubow;
+		};
+		1DF09FE41E3F50F10054A18E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1DF09FB91E3F50F10054A18E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DF09FC01E3F50F10054A18E;
+			remoteInfo = Accubow;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DF09FC11E3F50F10054A18E /* Accubow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accubow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF09FC41E3F50F10054A18E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DF09FC61E3F50F10054A18E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DF09FC91E3F50F10054A18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DF09FCC1E3F50F10054A18E /* Accubow.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Accubow.xcdatamodel; sourceTree = "<group>"; };
+		1DF09FCE1E3F50F10054A18E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DF09FD11E3F50F10054A18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DF09FD31E3F50F10054A18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF09FD81E3F50F10054A18E /* AccubowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccubowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF09FDC1E3F50F10054A18E /* AccubowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccubowTests.swift; sourceTree = "<group>"; };
+		1DF09FDE1E3F50F10054A18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF09FE31E3F50F10054A18E /* AccubowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccubowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF09FE71E3F50F10054A18E /* AccubowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccubowUITests.swift; sourceTree = "<group>"; };
+		1DF09FE91E3F50F10054A18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DF09FBE1E3F50F10054A18E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FD51E3F50F10054A18E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FE01E3F50F10054A18E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DF09FB81E3F50F10054A18E = {
+			isa = PBXGroup;
+			children = (
+				1DF09FC31E3F50F10054A18E /* Accubow */,
+				1DF09FDB1E3F50F10054A18E /* AccubowTests */,
+				1DF09FE61E3F50F10054A18E /* AccubowUITests */,
+				1DF09FC21E3F50F10054A18E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1DF09FC21E3F50F10054A18E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DF09FC11E3F50F10054A18E /* Accubow.app */,
+				1DF09FD81E3F50F10054A18E /* AccubowTests.xctest */,
+				1DF09FE31E3F50F10054A18E /* AccubowUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DF09FC31E3F50F10054A18E /* Accubow */ = {
+			isa = PBXGroup;
+			children = (
+				1DF09FC41E3F50F10054A18E /* AppDelegate.swift */,
+				1DF09FC61E3F50F10054A18E /* ViewController.swift */,
+				1DF09FC81E3F50F10054A18E /* Main.storyboard */,
+				1DF09FCE1E3F50F10054A18E /* Assets.xcassets */,
+				1DF09FD01E3F50F10054A18E /* LaunchScreen.storyboard */,
+				1DF09FD31E3F50F10054A18E /* Info.plist */,
+				1DF09FCB1E3F50F10054A18E /* Accubow.xcdatamodeld */,
+			);
+			path = Accubow;
+			sourceTree = "<group>";
+		};
+		1DF09FDB1E3F50F10054A18E /* AccubowTests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF09FDC1E3F50F10054A18E /* AccubowTests.swift */,
+				1DF09FDE1E3F50F10054A18E /* Info.plist */,
+			);
+			path = AccubowTests;
+			sourceTree = "<group>";
+		};
+		1DF09FE61E3F50F10054A18E /* AccubowUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1DF09FE71E3F50F10054A18E /* AccubowUITests.swift */,
+				1DF09FE91E3F50F10054A18E /* Info.plist */,
+			);
+			path = AccubowUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DF09FC01E3F50F10054A18E /* Accubow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF09FEC1E3F50F10054A18E /* Build configuration list for PBXNativeTarget "Accubow" */;
+			buildPhases = (
+				1DF09FBD1E3F50F10054A18E /* Sources */,
+				1DF09FBE1E3F50F10054A18E /* Frameworks */,
+				1DF09FBF1E3F50F10054A18E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Accubow;
+			productName = Accubow;
+			productReference = 1DF09FC11E3F50F10054A18E /* Accubow.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1DF09FD71E3F50F10054A18E /* AccubowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF09FEF1E3F50F10054A18E /* Build configuration list for PBXNativeTarget "AccubowTests" */;
+			buildPhases = (
+				1DF09FD41E3F50F10054A18E /* Sources */,
+				1DF09FD51E3F50F10054A18E /* Frameworks */,
+				1DF09FD61E3F50F10054A18E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF09FDA1E3F50F10054A18E /* PBXTargetDependency */,
+			);
+			name = AccubowTests;
+			productName = AccubowTests;
+			productReference = 1DF09FD81E3F50F10054A18E /* AccubowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1DF09FE21E3F50F10054A18E /* AccubowUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DF09FF21E3F50F10054A18E /* Build configuration list for PBXNativeTarget "AccubowUITests" */;
+			buildPhases = (
+				1DF09FDF1E3F50F10054A18E /* Sources */,
+				1DF09FE01E3F50F10054A18E /* Frameworks */,
+				1DF09FE11E3F50F10054A18E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1DF09FE51E3F50F10054A18E /* PBXTargetDependency */,
+			);
+			name = AccubowUITests;
+			productName = AccubowUITests;
+			productReference = 1DF09FE31E3F50F10054A18E /* AccubowUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DF09FB91E3F50F10054A18E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Ангелина Латаш";
+				TargetAttributes = {
+					1DF09FC01E3F50F10054A18E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					1DF09FD71E3F50F10054A18E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1DF09FC01E3F50F10054A18E;
+					};
+					1DF09FE21E3F50F10054A18E = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1DF09FC01E3F50F10054A18E;
+					};
+				};
+			};
+			buildConfigurationList = 1DF09FBC1E3F50F10054A18E /* Build configuration list for PBXProject "Accubow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DF09FB81E3F50F10054A18E;
+			productRefGroup = 1DF09FC21E3F50F10054A18E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DF09FC01E3F50F10054A18E /* Accubow */,
+				1DF09FD71E3F50F10054A18E /* AccubowTests */,
+				1DF09FE21E3F50F10054A18E /* AccubowUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DF09FBF1E3F50F10054A18E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF09FD21E3F50F10054A18E /* LaunchScreen.storyboard in Resources */,
+				1DF09FCF1E3F50F10054A18E /* Assets.xcassets in Resources */,
+				1DF09FCA1E3F50F10054A18E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FD61E3F50F10054A18E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FE11E3F50F10054A18E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DF09FBD1E3F50F10054A18E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF09FC71E3F50F10054A18E /* ViewController.swift in Sources */,
+				1DF09FC51E3F50F10054A18E /* AppDelegate.swift in Sources */,
+				1DF09FCD1E3F50F10054A18E /* Accubow.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FD41E3F50F10054A18E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF09FDD1E3F50F10054A18E /* AccubowTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DF09FDF1E3F50F10054A18E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF09FE81E3F50F10054A18E /* AccubowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1DF09FDA1E3F50F10054A18E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF09FC01E3F50F10054A18E /* Accubow */;
+			targetProxy = 1DF09FD91E3F50F10054A18E /* PBXContainerItemProxy */;
+		};
+		1DF09FE51E3F50F10054A18E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1DF09FC01E3F50F10054A18E /* Accubow */;
+			targetProxy = 1DF09FE41E3F50F10054A18E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1DF09FC81E3F50F10054A18E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF09FC91E3F50F10054A18E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DF09FD01E3F50F10054A18E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DF09FD11E3F50F10054A18E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DF09FEA1E3F50F10054A18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DF09FEB1E3F50F10054A18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DF09FED1E3F50F10054A18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Accubow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.Accubow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1DF09FEE1E3F50F10054A18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Accubow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.Accubow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1DF09FF01E3F50F10054A18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AccubowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.AccubowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accubow.app/Accubow";
+			};
+			name = Debug;
+		};
+		1DF09FF11E3F50F10054A18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = AccubowTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.AccubowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Accubow.app/Accubow";
+			};
+			name = Release;
+		};
+		1DF09FF31E3F50F10054A18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = AccubowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.AccubowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Accubow;
+			};
+			name = Debug;
+		};
+		1DF09FF41E3F50F10054A18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = AccubowUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Distillery.AccubowUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Accubow;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DF09FBC1E3F50F10054A18E /* Build configuration list for PBXProject "Accubow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF09FEA1E3F50F10054A18E /* Debug */,
+				1DF09FEB1E3F50F10054A18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DF09FEC1E3F50F10054A18E /* Build configuration list for PBXNativeTarget "Accubow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF09FED1E3F50F10054A18E /* Debug */,
+				1DF09FEE1E3F50F10054A18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1DF09FEF1E3F50F10054A18E /* Build configuration list for PBXNativeTarget "AccubowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF09FF01E3F50F10054A18E /* Debug */,
+				1DF09FF11E3F50F10054A18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1DF09FF21E3F50F10054A18E /* Build configuration list for PBXNativeTarget "AccubowUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DF09FF31E3F50F10054A18E /* Debug */,
+				1DF09FF41E3F50F10054A18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DF09FCB1E3F50F10054A18E /* Accubow.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DF09FCC1E3F50F10054A18E /* Accubow.xcdatamodel */,
+			);
+			currentVersion = 1DF09FCC1E3F50F10054A18E /* Accubow.xcdatamodel */;
+			path = Accubow.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1DF09FB91E3F50F10054A18E /* Project object */;
+}
