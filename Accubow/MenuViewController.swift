@@ -14,34 +14,19 @@ protocol SlideMenuDelegate {
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String)
 }
 
-class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
     
-    /**
-    *  Array to display menu options
-    */
     @IBOutlet var tblMenuOptions : UITableView!
+    @IBOutlet var btnCloseMenuOverlay : UIButton!   // Transparent button to hide menu
     
-    /**
-    *  Transparent button to hide menu
-    */
-    @IBOutlet var btnCloseMenuOverlay : UIButton!
-    
-    /**
-    *  Array containing menu cell's identifiers
-    */
+    // Array containing menu cell's identifiers
     let menuCellIdentifiers = ["searchCellMenuID",
                                "settingsCellMenuID",
                                "arcadeCellMenuID",
                                "laserTrainingCellMenuID",
                                "gettingStartingCellMenuID"]
     
-    /**
-    *  Menu button which was tapped to display the menu
-    */
-    var btnMenu : UIButton!
-    
-
-
+    var btnMenu : UIButton! // Menu button which was tapped to display the menu
     var delegate : SlideMenuDelegate?   // delegate of the MenuVC
     
     override func viewDidLoad() {
@@ -127,11 +112,61 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("MenuViewController: \(#function)")
-        delegate?.slideMenuItemSelectedAtIndex(Int32(indexPath.row))
-        let btn = UIButton(type: UIButtonType.custom)
-        btn.tag = indexPath.row
-        self.onCloseMenuClick(btn)
+        if indexPath.row == 3 {
+            if let selectedCell = tableView.cellForRow(at: indexPath) {
+                perform(#selector(MenuViewController.showMenuPopover(_:)), with: selectedCell, afterDelay: 0.01)
+            }
+        } else {
+            delegate?.slideMenuItemSelectedAtIndex(Int32(indexPath.row))
+            let btn = UIButton(type: UIButtonType.custom)
+            btn.tag = indexPath.row
+            self.onCloseMenuClick(btn)
+        }
     }
+    
+    func showMenuPopover(_ selectedCell: UITableViewCell) {
+        print("BaseViewController: \(#function)")
+        // get a reference to the view controller for the popover
+        if let popoverContent = appDelegate.storyboard.instantiateViewController(withIdentifier: "TrainingPopoverMenuID") as? TrainingPopoverMenuController {
+            
+            popoverContent.modalPresentationStyle = UIModalPresentationStyle.popover
+            popoverContent.preferredContentSize = CGSize(width: screen.width / 2, height: screen.height / 3.2)
+            
+            // set up the popover presentation controller
+            if let popoverPresentationController = popoverContent.popoverPresentationController {
+                popoverPresentationController.sourceView = self.view
+                popoverPresentationController.sourceRect = selectedCell.frame
+                popoverPresentationController.delegate = self
+                popoverPresentationController.permittedArrowDirections = .left
+                self.present(popoverContent, animated: false, completion: nil)
+            }
+        }
+    }
+    
+    // MARK: UIPopoverPresentationControllerDelegate method
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        print("MenuViewController: should dismiss")
+        return true
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+        print("MenuViewController: \(#function)")
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        print("MenuViewController: \(#function)")
+        return .none
+    }
+    
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        print("MenuViewController: \(#function)")
+        return .none
+    }
+    
+    //    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
+    //        print("prepare for presentation")
+    //    }
     
     // MARK: menu's buttons actions
     
@@ -145,10 +180,5 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("MenuViewController: \(#function)")
         delegate?.openViewControllerBasedOnIdentifier("ProfileViewControllerID")
     }
-    
-//    override func prepareForSegue(_ segue: UIStoryboardSegue, sender: AnyObject?) {
-//        // Get the new view controller using segue.destinationViewController.
-//        // Pass the selected object to the new view controller.
-//    }
     
 }
