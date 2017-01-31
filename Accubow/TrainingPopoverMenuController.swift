@@ -33,9 +33,9 @@ class TrainingPopoverMenuController: UIViewController, UITableViewDataSource, UI
     // MARK: table view datasource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        cell?.textLabel?.text = popoverMenuCellTitles[indexPath.row]
-        return cell!
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! TrainingMenuCell
+        cell.titleLabel.text = popoverMenuCellTitles[indexPath.row]
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -59,4 +59,10 @@ class TrainingPopoverMenuController: UIViewController, UITableViewDataSource, UI
         self.popoverPresentationController?.delegate?.popoverPresentationControllerDidDismissPopover!(popoverPresentationController!)
     }
     
+}
+
+
+
+class TrainingMenuCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
 }
