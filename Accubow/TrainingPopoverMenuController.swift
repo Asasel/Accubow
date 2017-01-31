@@ -8,7 +8,12 @@
 
 import UIKit
 
-class TrainingPopoverMenuController: UIViewController {
+class TrainingPopoverMenuController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
+    
+    let cellIdentifier = "menuPopoverCell"
+    let popoverMenuCellTitles = ["DETERMINE YOUR STARTING RESISTANCE",
+                               "STRENGTH TRAINING",
+                               "STAMMA AND STABILITY TRAINING"]
     
     override func viewWillAppear(_ animated: Bool) {
         print("TrainingPopoverMenuController: \(#function)")
@@ -23,6 +28,35 @@ class TrainingPopoverMenuController: UIViewController {
         print("TrainingPopoverMenuController: \(#function)")
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: table view datasource
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        cell?.textLabel?.text = popoverMenuCellTitles[indexPath.row]
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return self.view.bounds.height / 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return popoverMenuCellTitles.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // MARK: table view delegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("TrainingPopoverMenuController: \(#function)")
+        dismiss(animated: true, completion: nil)
+        self.popoverPresentationController?.delegate?.popoverPresentationControllerDidDismissPopover!(popoverPresentationController!)
     }
     
 }
