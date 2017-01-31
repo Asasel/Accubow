@@ -31,7 +31,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
             break
         case 3:
             print("LaserTraining\n", terminator: "")
-            self.openViewControllerBasedOnIdentifier("LaserTrainingID")
             break
         case 4:
             print("GettingStarted\n", terminator: "")
@@ -87,7 +86,8 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         return defaultMenuImage;
     }
     
-    func onSlideMenuButtonPressed(_ sender : UIButton){
+    func onSlideMenuButtonPressed(_ sender : UIButton) {
+        print("BaseViewController: \(#function)")
         if (sender.tag == 10)
         {
             // To Hide Menu If it already there
