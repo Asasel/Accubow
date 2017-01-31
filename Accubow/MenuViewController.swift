@@ -11,6 +11,7 @@ import UIKit
 
 protocol SlideMenuDelegate {
     func slideMenuItemSelectedAtIndex(_ index : Int32)
+    func openViewControllerBasedOnIdentifier(_ strIdentifier:String)
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -89,7 +90,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("MenuViewController: \(#function)")
         let menuCellIdentifier = menuCellIdentifiers[indexPath.row]
         var height = rowHeight
         switch menuCellIdentifier {
@@ -127,6 +127,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("MenuViewController: \(#function)")
+        delegate?.slideMenuItemSelectedAtIndex(Int32(indexPath.row))
         let btn = UIButton(type: UIButtonType.custom)
         btn.tag = indexPath.row
         self.onCloseMenuClick(btn)
@@ -136,12 +137,18 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func settingsButtonPressed(_ sender: UIButton) {
         print("MenuViewController: \(#function)")
-       // TODO: BaseViewController.shared.openViewControllerBasedOnIdentifier("SettingsViewControllerID")
+        delegate?.openViewControllerBasedOnIdentifier("SettingsViewControllerID")
     }
     
     
     @IBAction func profileButtonPressed(_ sender: UIButton) {
         print("MenuViewController: \(#function)")
+        delegate?.openViewControllerBasedOnIdentifier("ProfileViewControllerID")
     }
+    
+//    override func prepareForSegue(_ segue: UIStoryboardSegue, sender: AnyObject?) {
+//        // Get the new view controller using segue.destinationViewController.
+//        // Pass the selected object to the new view controller.
+//    }
     
 }
