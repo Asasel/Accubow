@@ -78,7 +78,6 @@
 				1DD24E1D1E40CE770018D7DB /* ArcadeViewController.swift */,
 				1DF0A0021E3FB07A0054A18E /* SettingsViewController.swift */,
 				1DD24E1B1E40B63F0018D7DB /* ProfileViewController.swift */,
-				1DD24E1F1E40DB320018D7DB /* TrainingPopoverMenuController.swift */,
 				1DF09FFD1E3FA6F70054A18E /* Menu */,
 				1DF09FFE1E3FA71B0054A18E /* Storyboards */,
 				1DF09FCE1E3F50F10054A18E /* Assets.xcassets */,
@@ -91,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				1DF09FF51E3F8D1C0054A18E /* MenuViewController.swift */,
+				1DD24E1F1E40DB320018D7DB /* TrainingPopoverMenuController.swift */,
 				1DF09FF71E3F98BF0054A18E /* BaseViewController.swift */,
 			);
 			name = Menu;
