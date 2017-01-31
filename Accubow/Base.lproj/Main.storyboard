@@ -154,13 +154,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xQc-HP-J6K" id="lbq-F5-qCr">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Kf-vd-J63">
-                                                    <rect key="frame" x="8" y="0.0" width="232" height="150"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="laserTrainingCellMenuID" rowHeight="165" id="OhP-z3-ZQb">
@@ -169,13 +162,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OhP-z3-ZQb" id="ALe-qe-7AM">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TcJ-xA-XAH">
-                                                    <rect key="frame" x="4" y="0.0" width="232" height="133"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gettingStartingCellMenuID" rowHeight="165" id="Qwg-Dg-Bhi">
@@ -184,13 +170,6 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qwg-Dg-Bhi" id="CJW-Rn-IYN">
                                             <rect key="frame" x="0.0" y="0.0" width="240" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUt-Oe-y94">
-                                                    <rect key="frame" x="4" y="8" width="232" height="133"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Button"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -233,13 +212,34 @@
                     </view>
                     <navigationItem key="navigationItem" title="Getting started" id="nuc-B1-j2f"/>
                     <connections>
-                        <segue destination="wn3-t4-SL3" kind="show" identifier="push_toLaserTraining" id="93Q-Yk-Oh5"/>
+                        <segue destination="wn3-t4-SL3" kind="show" identifier="laser_training_segue" id="93Q-Yk-Oh5"/>
                         <segue destination="aWC-PZ-plh" kind="show" identifier="settings_segue" id="Lse-uO-eHb"/>
+                        <segue destination="ACw-FP-SUp" kind="show" identifier="profile_segue" id="Mba-XU-yY2"/>
+                        <segue destination="jYz-o8-eFf" kind="show" identifier="arcade_segue" id="SCp-dO-vZ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="930" y="123"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="VLv-UR-EXa">
+            <objects>
+                <viewController restorationIdentifier="ProfileViewControllerID" storyboardIdentifier="ProfileViewControllerID" id="ACw-FP-SUp" customClass="ProfileViewController" customModule="Accubow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ng6-OQ-IRR"/>
+                        <viewControllerLayoutGuide type="bottom" id="SHl-b2-u66"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cxK-xF-Fqu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="2aQ-Ii-sNr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cqY-iH-VYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="-1193"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jzI-OV-VaZ">
@@ -279,10 +279,29 @@
             </objects>
             <point key="canvasLocation" x="1810" y="123"/>
         </scene>
+        <!--Arcade-->
+        <scene sceneID="2nL-eu-MQp">
+            <objects>
+                <viewController restorationIdentifier="ArcadeID" storyboardIdentifier="ArcadeID" id="jYz-o8-eFf" customClass="ArcadeViewController" customModule="Accubow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JZo-oO-dUv"/>
+                        <viewControllerLayoutGuide type="bottom" id="LqK-uj-p2X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iEy-Yc-Mj8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Arcade" id="0ku-7C-HvW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZI-np-r8D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="884"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ENL-ld-aNH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YHt-Sw-S6J" sceneMemberID="viewController">
+                <navigationController restorationIdentifier="MainNavigationControllerID" storyboardIdentifier="MainNavigationControllerID" automaticallyAdjustsScrollViewInsets="NO" id="YHt-Sw-S6J" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uN4-0W-IOu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
