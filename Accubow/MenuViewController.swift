@@ -15,7 +15,8 @@ protocol SlideMenuDelegate {
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPopoverPresentationControllerDelegate {
-    
+    static var shared = MenuViewController()
+
     @IBOutlet var tblMenuOptions : UITableView!
     @IBOutlet var btnCloseMenuOverlay : UIButton!   // Transparent button to hide menu
     
@@ -31,7 +32,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tblMenuOptions.tableFooterView = UIView()
+        tblMenuOptions?.tableFooterView = UIView()
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,7 +48,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func onCloseMenuClick(_ button:UIButton!) {
         print("MenuViewController: \(#function)")
-        btnMenu.tag = 0
+        btnMenu?.tag = 0
         
         if (self.delegate != nil) {
             var index = Int32(button.tag)
@@ -125,12 +126,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func showMenuPopover(_ selectedCell: UITableViewCell) {
-        print("BaseViewController: \(#function)")
-        // get a reference to the view controller for the popover
         if let popoverContent = appDelegate.storyboard.instantiateViewController(withIdentifier: "TrainingPopoverMenuID") as? TrainingPopoverMenuController {
             
             popoverContent.modalPresentationStyle = UIModalPresentationStyle.popover
-            popoverContent.preferredContentSize = CGSize(width: screen.width / 2, height: screen.height / 3.2)
+            popoverContent.preferredContentSize = CGSize(width: screen.width / 2, height: screen.height / 2.5)
             
             // set up the popover presentation controller
             if let popoverPresentationController = popoverContent.popoverPresentationController {
@@ -146,27 +145,21 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // MARK: UIPopoverPresentationControllerDelegate method
     
     func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
-        print("MenuViewController: should dismiss")
         return true
     }
     
     func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
         print("MenuViewController: \(#function)")
+        self.onCloseMenuClick(UIButton(type: UIButtonType.custom))
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-        print("MenuViewController: \(#function)")
         return .none
     }
     
     func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
-        print("MenuViewController: \(#function)")
         return .none
     }
-    
-    //    func prepareForPopoverPresentation(_ popoverPresentationController: UIPopoverPresentationController) {
-    //        print("prepare for presentation")
-    //    }
     
     // MARK: menu's buttons actions
     
