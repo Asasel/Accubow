@@ -13,3 +13,4 @@ let rowHeight: CGFloat = 68.0
 
 
 let appDelegate = AppDelegate.shared
+let screen = UIScreen.main.bounds
