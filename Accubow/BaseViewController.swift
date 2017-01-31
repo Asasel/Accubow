@@ -9,11 +9,9 @@
 import UIKit
 
 class BaseViewController: UIViewController, SlideMenuDelegate {
-    static var shared = BaseViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -27,17 +25,17 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
         let topViewController : UIViewController = self.navigationController!.topViewController!
         print("View Controller is : \(topViewController) \n", terminator: "")
         switch(index){
-        case 4:
-            print("GettingStarted\n", terminator: "")
-
-            self.openViewControllerBasedOnIdentifier("GettingStartedID")
-            
+        case 2:
+            print("arcade\n", terminator: "")
+            self.openViewControllerBasedOnIdentifier("ArcadeID")
             break
         case 3:
             print("LaserTraining\n", terminator: "")
-            
             self.openViewControllerBasedOnIdentifier("LaserTrainingID")
-            
+            break
+        case 4:
+            print("GettingStarted\n", terminator: "")
+            self.openViewControllerBasedOnIdentifier("GettingStartedID")
             break
         default:
             print("default\n", terminator: "")
@@ -45,23 +43,20 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func openViewControllerBasedOnIdentifier(_ strIdentifier:String) {
-        print("BaseViewController: \(#function): strIdentifier = \(strIdentifier)")
-        let destViewController = AppDelegate.shared.storyboard.instantiateViewController(withIdentifier: "LaserTrainingID")
-        print("destViewController = \(destViewController.restorationIdentifier)")
+        let destViewController = appDelegate.storyboard.instantiateViewController(withIdentifier: strIdentifier)
         
-//        let topViewController = self.navigationController!.topViewController!
-        if let topViewController = AppDelegate.shared.navigationController?.topViewController {
-        
-        if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
-            print("Same VC")
-        } else {
-            self.navigationController!.pushViewController(destViewController, animated: true)
-        }
+        if let topViewController = self.navigationController?.topViewController {
+            print("topViewController = \(topViewController.restorationIdentifier)")
+            if (topViewController.restorationIdentifier! == destViewController.restorationIdentifier!){
+                print("Same VC")
+            } else {
+                print("Going to \(destViewController.restorationIdentifier)")
+                self.navigationController?.pushViewController(destViewController, animated: true)
+            }
         }
     }
     
     func addSlideMenuButton() {
-        print("BaseViewController: \(#function)")
         let btnShowMenu = UIButton(type: UIButtonType.system)
         btnShowMenu.setImage(self.defaultMenuImage(), for: UIControlState())
         btnShowMenu.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -93,7 +88,6 @@ class BaseViewController: UIViewController, SlideMenuDelegate {
     }
     
     func onSlideMenuButtonPressed(_ sender : UIButton){
-        print("BaseViewController: \(#function)")
         if (sender.tag == 10)
         {
             // To Hide Menu If it already there
