@@ -10,3 +10,6 @@ import UIKit
 
 
 let rowHeight: CGFloat = 68.0
+
+
+let appDelegate = AppDelegate.shared
