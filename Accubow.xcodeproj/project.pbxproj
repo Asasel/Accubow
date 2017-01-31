@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1DD24E1C1E40B63F0018D7DB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD24E1B1E40B63F0018D7DB /* ProfileViewController.swift */; };
+		1DD24E1E1E40CE770018D7DB /* ArcadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD24E1D1E40CE770018D7DB /* ArcadeViewController.swift */; };
 		1DF09FC51E3F50F10054A18E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FC41E3F50F10054A18E /* AppDelegate.swift */; };
 		1DF09FCA1E3F50F10054A18E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF09FC81E3F50F10054A18E /* Main.storyboard */; };
 		1DF09FCD1E3F50F10054A18E /* Accubow.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DF09FCB1E3F50F10054A18E /* Accubow.xcdatamodeld */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1DD24E1B1E40B63F0018D7DB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		1DD24E1D1E40CE770018D7DB /* ArcadeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcadeViewController.swift; sourceTree = "<group>"; };
 		1DF09FC11E3F50F10054A18E /* Accubow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accubow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF09FC41E3F50F10054A18E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF09FC91E3F50F10054A18E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +73,9 @@
 				1DF09FC41E3F50F10054A18E /* AppDelegate.swift */,
 				1DF09FF91E3F99A60054A18E /* GettingStartedViewController.swift */,
 				1DF09FFB1E3F9DAC0054A18E /* LaserTrainingViewController.swift */,
+				1DD24E1D1E40CE770018D7DB /* ArcadeViewController.swift */,
 				1DF0A0021E3FB07A0054A18E /* SettingsViewController.swift */,
+				1DD24E1B1E40B63F0018D7DB /* ProfileViewController.swift */,
 				1DF09FFD1E3FA6F70054A18E /* Menu */,
 				1DF09FFE1E3FA71B0054A18E /* Storyboards */,
 				1DF09FCE1E3F50F10054A18E /* Assets.xcassets */,
@@ -181,10 +187,12 @@
 			files = (
 				1DF0A0011E3FAA010054A18E /* Constansts.swift in Sources */,
 				1DF09FF81E3F98BF0054A18E /* BaseViewController.swift in Sources */,
+				1DD24E1E1E40CE770018D7DB /* ArcadeViewController.swift in Sources */,
 				1DF09FC51E3F50F10054A18E /* AppDelegate.swift in Sources */,
 				1DF09FFC1E3F9DAC0054A18E /* LaserTrainingViewController.swift in Sources */,
 				1DF09FFA1E3F99A60054A18E /* GettingStartedViewController.swift in Sources */,
 				1DF09FCD1E3F50F10054A18E /* Accubow.xcdatamodeld in Sources */,
+				1DD24E1C1E40B63F0018D7DB /* ProfileViewController.swift in Sources */,
 				1DF09FF61E3F8D1C0054A18E /* MenuViewController.swift in Sources */,
 				1DF0A0031E3FB07A0054A18E /* SettingsViewController.swift in Sources */,
 			);
@@ -350,6 +358,7 @@
 				1DF09FEE1E3F50F10054A18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
